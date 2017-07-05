@@ -15,4 +15,3 @@ withdrawal() only pays to the contract creator  (hint - truffle deploys from web
 
 New concepts in this assignment:  tx.origin, msg.sender, address.send  
 Reading: http://solidity.readthedocs.io/en/develop/units-and-global-variables.html
-*/

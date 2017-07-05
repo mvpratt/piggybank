@@ -12,7 +12,7 @@ contract PiggyBank {
 	}
 
 	function deposit() payable {
-		// only accept if its from owner
+		// bonus - only accept if its from owner
 
 	}
 
