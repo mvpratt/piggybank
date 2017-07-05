@@ -6,7 +6,7 @@ contract PiggyBank {
     address public owner;
     uint public savings_goal;
 
-	function PiggyBank(uint goal) {
+	function PiggyBank() {
 		owner = tx.origin;   // external account that created the contract
 		savings_goal = 10;
 	}
