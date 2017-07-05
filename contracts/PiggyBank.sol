@@ -5,9 +5,10 @@ contract PiggyBank {
 
     address public owner;
     uint public savings_goal;
+    bool success;
 
 	function PiggyBank() {
-		owner = tx.origin;   // external account that created the contract
+		owner = msg.sender;   // account that created the contract
 		savings_goal = 10;
 	}
 
@@ -16,10 +17,12 @@ contract PiggyBank {
 
 	}
 
-	function withdrawal() returns(bool success) {
+	function withdrawal() {
 		if (msg.sender == owner && this.balance >= savings_goal) {
 			success = msg.sender.send(this.balance);
-			return success;
+			if (!success) {
+			    throw;
+			}
 		}
 	}
 }
